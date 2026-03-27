@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analyza Stranky</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <section class="panel">
+      <p class="eyebrow">Projekt 2</p>
+      <h1>Analyza stranky z URL</h1>
+      <p class="intro">
+        Zadej adresu stranky a aplikace vrati deset nejcastejsich slov z nalezeneho textu.
+      </p>
+
+      <form id="summary-form" class="form">
+        <label for="url-input">URL stranky</label>
+        <div class="row">
+          <input
+            id="url-input"
+            name="url"
+            type="url"
+            placeholder="https://example.com/clanek"
+            required
+          >
+          <button type="submit">Analyzovat</button>
+        </div>
+      </form>
+
+      <div class="status">
+        <span id="status-text">Pripraveno.</span>
+      </div>
+
+      <article class="result">
+        <h2>Top 10 slov</h2>
+        <ol id="summary-output" class="words-list">
+          <li>Tady se zobrazi vysledek analyzy.</li>
+        </ol>
+      </article>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
