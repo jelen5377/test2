@@ -1,35 +1,32 @@
-# URL Analyzer
+# URL Analyzer - GitHub Pages verze
 
-Maly projekt se serverem a webovym rozhranim.
+Staticka verze pripravena pro publikaci na GitHub Pages.
 
 ## Co umi
 
-- vezme URL stranky
-- stahne HTML na serveru
-- vytahne text
-- spocita cetnosti slov
-- vrati 10 nejcastejsich slov
+- analyzovat vlozeny text
+- vypsat 10 nejcastejsich slov
+- zkusit nacist obsah ze zadane URL primo v prohlizeci
 
-## Proc je tam backend
+## Omezeni GitHub Pages verze
 
-Stazeni cizi webove stranky primo z prohlizece casto narazi na CORS. Backend stranku nacte, zpracuje text a vrati vysledek klientovi.
+GitHub Pages je jen staticky hosting bez backendu. Proto nelze spolehlive nacitat libovolne cizi weby. Browser casto narazi na CORS omezeni.
 
-## Lokalni spusteni
+Proto aplikace funguje takto:
 
-1. `npm install`
-2. `npm start`
-3. otevri `http://localhost:8787`
+- nejspolehlivejsi je vlozit text rucne
+- nacitani URL funguje jen u webu, ktere to vyslovne povoluji
 
-## Nasazeni
+## Publikace na GitHub Pages
 
-Frontend i backend jsou tady zamerne spolu, aby sel projekt snadno nasadit treba na:
+Pouzivaji se jen soubory ve slozce `public`:
 
-- Render
-- Railway
-- Fly.io
-- Azure Web App
-- jakykoli Node.js hosting
+- `index.html`
+- `style.css`
+- `script.js`
 
-## Poznamka
+Pro GitHub Pages je dej do rootu repozitare, nebo branch nastav na slozku, kterou chces publikovat.
 
-Projekt nepouziva AI ani externi API. Nema tedy zadne usage naklady za analyzu.
+## Bez nakladu
+
+Projekt nepouziva AI ani zadne placene API.

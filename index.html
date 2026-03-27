@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Analyza Stranky</title>
+  <title>Analyza Textu a URL</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main class="shell">
     <section class="panel">
-      <p class="eyebrow">Projekt 2</p>
-      <h1>Analyza stranky z URL</h1>
+      <p class="eyebrow">GitHub Pages verze</p>
+      <h1>Analyza stranky nebo textu</h1>
       <p class="intro">
-        Zadej adresu stranky a aplikace vrati deset nejcastejsich slov z nalezeneho textu.
+        Aplikace vypise 10 nejcastejsich slov. Na GitHub Pages funguje spolehlive pro rucne vlozeny text a u nekterych webu umi nacist i URL, pokud to dany web povoli pres CORS.
       </p>
 
-      <form id="summary-form" class="form">
+      <form id="url-form" class="form">
         <label for="url-input">URL stranky</label>
         <div class="row">
           <input
@@ -23,10 +23,21 @@
             name="url"
             type="url"
             placeholder="https://example.com/clanek"
-            required
           >
-          <button type="submit">Analyzovat</button>
+          <button type="button" id="fetch-button">Zkusit nacist URL</button>
         </div>
+      </form>
+
+      <form id="text-form" class="form text-form">
+        <label for="text-input">Obsah stranky nebo libovolny text</label>
+        <textarea
+          id="text-input"
+          name="text"
+          rows="12"
+          placeholder="Vloz text stranky sem. Pokud nacitani URL neprojde, zkopiruj sem obsah clanku nebo text z webu."
+          required
+        ></textarea>
+        <button type="submit">Analyzovat text</button>
       </form>
 
       <div class="status">

@@ -31,7 +31,7 @@ body {
 }
 
 .panel {
-  width: min(100%, 860px);
+  width: min(100%, 900px);
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: 28px;
@@ -54,7 +54,7 @@ h1 {
 }
 
 .intro {
-  max-width: 60ch;
+  max-width: 65ch;
   margin: 14px 0 24px;
   color: var(--muted);
   line-height: 1.6;
@@ -65,6 +65,10 @@ h1 {
   gap: 10px;
 }
 
+.text-form {
+  margin-top: 18px;
+}
+
 .row {
   display: grid;
   grid-template-columns: 1fr auto;
@@ -72,15 +76,23 @@ h1 {
 }
 
 input,
+textarea,
 button {
   font: inherit;
   border-radius: 16px;
   padding: 14px 16px;
 }
 
-input {
+input,
+textarea {
   width: 100%;
   border: 1px solid var(--line);
+  background: white;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 220px;
 }
 
 button {
@@ -116,6 +128,12 @@ button:hover {
   margin: 0;
   padding-left: 22px;
   line-height: 1.8;
+}
+
+.note {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 0.95rem;
 }
 
 @media (max-width: 720px) {
